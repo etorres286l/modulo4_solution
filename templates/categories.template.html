@@ -1,17 +1,16 @@
-<a ui-sref="home">Home</a> &lt;
+<a ui-sref="home">Home</a> &gt;
 <span>Categories</span>
 <br>
 <h1>Categories List</h1>
 <br>
 
-<p>There are {{ catctrl.categories.length}} categories</p>
-
+<p>There are {{ $ctrl.items.length}} categories</p>
 <ul>
-
-	<li ng-repeat="category in catctrl.categories">
-		{{category.name}}
-	</li>
-
-
-	
+ <li ng-repeat='category in $ctrl.items'>
+	 <a ui-sref="items({categoryShortName: category.short_name})">
+	{{ category.name }} ({{ category.short_name }}) </a>
+ </li>
 </ul>
+
+
+

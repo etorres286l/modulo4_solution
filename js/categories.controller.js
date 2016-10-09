@@ -6,11 +6,9 @@
 
 	CategoriesController.$inject = ['items'];
 	function CategoriesController(items){
-		var catctrl = this;
+		var $ctrl = this;
 
-		catctrl.categorias = items;
-
-
-    }
+		$ctrl.items = items;
+	}
 
 })();
